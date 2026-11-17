@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-navy: #101F3D;
+  --color-navy-dark: #0B1528;
+  --color-navy-light: #182C52;
+  --color-deep-charcoal: #151B26;
+  --color-premium-gold: #C9962B;
+  --color-gold-highlight: #E0AD42;
+  --color-gold-light: #FDF9F0;
+  --color-gold-soft: #F4E8D1;
+  --color-gold-hover: #D4A33B;
+  --color-soft-white: #F7F8FA;
+  --color-light-grey: #E9EDF2;
+  --color-body-dark: #263247;
+  --color-muted-slate: #5B6B82;
+
+  --font-heading: 'Plus Jakarta Sans', 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Inter', 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-body);
+    color: var(--color-body-dark);
+    background-color: #FFFFFF;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F1F4F8;
+}
+::-webkit-scrollbar-thumb {
+  background: #C5CFDC;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C9962B;
+}
+
+/* Utility classes */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #E0AD42 0%, #C9962B 50%, #B27E18 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-border-glow {
+  box-shadow: 0 0 15px rgba(201, 150, 43, 0.2);
+}
+
+.glass-nav {
+  background: rgba(16, 31, 61, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(224, 173, 66, 0.15);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
